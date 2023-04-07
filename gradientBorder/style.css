@@ -1,0 +1,51 @@
+
+
+body {
+    background-color: rgb(20, 20, 20);
+    display: grid;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    place-items: center;
+
+}
+.container {
+    gap: 50px;
+    display: grid;
+}
+
+.card {
+    background-color: rgb(30, 30, 30);
+    border-radius: 10px;
+    height: 250px; 
+    width: 400px;
+    position: relative;
+    gap: 20px;
+}
+
+.card:hover::before{
+    opacity: 1;
+
+}
+
+.card-content {
+    background-color: rgb(30, 30, 30);
+    border-radius: inherit;
+    inset: 1px;
+    position: absolute;
+
+}
+
+.card::before {
+    background: linear-gradient(
+        45deg, transparent 5%,
+        rgb(255, 215, 137) 50%,
+        transparent 99%
+        );
+        border-radius: inherit;
+        content: "";
+        inset: 0px;
+        opacity: 0;
+        position: absolute;
+        z-index: 0;
+}
